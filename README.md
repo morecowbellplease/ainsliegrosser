@@ -1,2 +1,2 @@
 # ainsliegrosser
-Mixing Engineering, Podcat and Audio Services
+Mixing Engineering, Podcast and Audio Services
