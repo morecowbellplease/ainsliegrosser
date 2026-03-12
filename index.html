@@ -37,28 +37,7 @@
     background: var(--paper);
     color: var(--ink);
     overflow-x: hidden;
-    cursor: none;
   }
-
-  /* Custom cursor */
-  .cursor {
-    position: fixed; top: 0; left: 0; z-index: 9999;
-    pointer-events: none; mix-blend-mode: multiply;
-  }
-  .cursor-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--gold); position: absolute;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s var(--ease);
-  }
-  .cursor-ring {
-    width: 36px; height: 36px; border-radius: 50%;
-    border: 1px solid var(--gold); position: absolute;
-    transform: translate(-50%, -50%);
-    transition: all 0.35s var(--ease);
-  }
-  body:has(a:hover) .cursor-ring,
-  body:has(button:hover) .cursor-ring { transform: translate(-50%,-50%) scale(1.6); opacity: 0.5; }
 
   /* NAV */
   nav {
@@ -533,10 +512,6 @@
 </head>
 <body>
 
-<div class="cursor">
-  <div class="cursor-dot" id="dot"></div>
-  <div class="cursor-ring" id="ring"></div>
-</div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -824,7 +799,7 @@
     <h2>Let's <em>Work</em></h2>
   </div>
   <p class="contact-lead reveal">Ready to take your record to the next level? Reach out to discuss your project.</p>
-  <a href="mailto:ainslie@mac.com" class="contact-email reveal">ainslie@mac.com</a>
+  <a href="/cdn-cgi/l/email-protection#d7b6beb9a4bbbeb297bab6b4f9b4b8ba" class="contact-email reveal"><span class="__cf_email__" data-cfemail="f6979f98859a9f93b69b9795d895999b">[email&#160;protected]</span></a>
   <ul class="contact-social-row reveal">
     <li><a href="https://www.instagram.com/ainsliegrosser/" target="_blank" rel="noopener">Instagram</a></li>
     <li><a href="https://www.facebook.com/ainsliegrosser" target="_blank" rel="noopener">Facebook</a></li>
@@ -969,20 +944,7 @@
 </footer>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Custom cursor
-  const dot = document.getElementById('dot');
-  const ring = document.getElementById('ring');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-  function animCursor() {
-    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-    requestAnimationFrame(animCursor);
-  }
-  animCursor();
-
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // Nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -1059,12 +1021,4 @@
         : '<div class="podcast-loading">No videos found.</div>';
 
     } catch(err) {
-      var fallback = '<div class="podcast-loading">Visit <a href="https://www.youtube.com/@MoreCowbellPleasePodcast" target="_blank" style="color:var(--gold-light)">our YouTube channel</a> for episodes.</div>';
-      if (popularGrid) popularGrid.innerHTML = fallback;
-      if (recentGrid) recentGrid.innerHTML = fallback;
-    }
-  }
-  loadPodcastVideos();
-</script>
-</body>
-</html>
+      var fallback = '<div class="podcast-loading">Visit <a href="https://www.youtube.com/@MoreCowbellPleasePodcast" target="_blank" style="color:v
