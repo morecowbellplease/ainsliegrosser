@@ -76,10 +76,9 @@
 
   /* HERO */
   #hero {
-    min-height: 100vh;
     display: grid; grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 8rem 4rem 4rem;
+    padding: 6rem 4rem 4rem;
     gap: 4rem;
     position: relative;
     overflow: hidden;
@@ -1028,4 +1027,13 @@
         : '<div class="podcast-loading">No videos found.</div>';
 
     } catch(err) {
-      var fallback = '<div class="podcast-loading">Visit <a href="https://www.youtube.com/@MoreCowbellPleasePodcast" target="_blank" style="color:v
+      console.error('YouTube API error:', err);
+      var fallback = '<div class="podcast-loading">Visit <a href="https://www.youtube.com/@MoreCowbellPleasePodcast" target="_blank" rel="noopener" style="color:var(--gold-light)">YouTube Channel →</a></div>';
+      if (popularGrid) popularGrid.innerHTML = fallback;
+      if (recentGrid) recentGrid.innerHTML = fallback;
+    }
+  }
+  loadPodcastVideos();
+</script>
+</body>
+</html>
